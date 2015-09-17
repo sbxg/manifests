@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+   <!-- REMOTES -->
+   <remote
+      name="gitlab"
+      fetch="http://gitlab.users.showroom.nss.thales/" />
+
+
+   <!-- PROJECTS -->
+   <project
+      name="imx6/linux.git"
+      path="linux-stable"
+      remote="gitlab"
+      revision="d1eef88e89b484d72254771fbfb229588be51862" />
+
+   <!-- This is System BUilder's uboot
+   <project
+      name="imx6/u-boot.git"
+      path="u-boot"
+      remote="gitlab"
+      revision="ffe7e5fae889c23a1e53df091619222523d2db73" />
+      -->
+
+   <project
+      name="miroirs/u-boot.git"
+      path="u-boot"
+      remote="gitlab"
+      revision="f33cdaa4c3da4a8fd35aa2f9a3172f31cc887b35" />
+
+   <project
+      name="systembuilder-ng/kernel-configs.git"
+      path="kernel-configs"
+      remote="gitlab"
+      revision="master" />
+
+   <project
+      name="systembuilder-ng/boards.git"
+      path="boards"
+      remote="gitlab"
+      revision="master" />
+
+
+</manifest>
+

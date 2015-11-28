@@ -21,7 +21,7 @@
       revision="64291f7db5bd8150a74ad2036f1037e6a0428df2" />
 
    <project
-      name="public/system-builder-ng-kernel-uboot"
+      name="public/system-builder-ng-uboot"
       path="u-boot"
       remote="jml"
       revision="f33cdaa4c3da4a8fd35aa2f9a3172f31cc887b35" />

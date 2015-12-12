@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+   <!-- REMOTES -->
+   <remote
+      name="kernel.org"
+      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/" />
+   <remote
+      name="denx"
+      fetch="http://git.denx.de/" />
+   <remote
+      name="jml"
+      fetch="ssh://gitolite3@bie91-1-82-227-34-59.fbx.proxad.net:1024/" />
+
+
+   <!-- PROJECTS -->
+   <project
+      name="stable/linux-stable.git"
+      path="linux-stable"
+      remote="kernel.org"
+      revision="be4cb235441a691ee63ba5e00843a9c210be5b8a" />
+
+   <project
+      name="public/system-builder-ng-uboot"
+      path="u-boot"
+      remote="jml"
+      revision="f33cdaa4c3da4a8fd35aa2f9a3172f31cc887b35" />
+
+   <project
+      name="public/system-builder-ng-kernel-config"
+      path="kernel-configs"
+      remote="jml"
+      revision="master" />
+
+   <project
+      name="public/system-builder-ng-kernel-board"
+      path="boards"
+      remote="jml"
+      revision="master" />
+
+
+</manifest>
+

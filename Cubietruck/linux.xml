@@ -18,7 +18,7 @@
       name="stable/linux-stable.git"
       path="linux-stable"
       remote="kernel.org"
-      revision="64291f7db5bd8150a74ad2036f1037e6a0428df2" />
+      revision="b5be40b90dbaa6bd337f3b77de361bfc0723468b" />
 
    <project
       name="public/system-builder-ng-uboot"

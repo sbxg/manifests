@@ -9,33 +9,33 @@
       name="denx"
       fetch="http://git.denx.de/" />
    <remote
-      name="jml"
-      fetch="ssh://gitolite3@bie91-1-82-227-34-59.fbx.proxad.net:1024/" />
+      name="github"
+      fetch="https://github.com/" />
 
 
    <!-- PROJECTS -->
    <project
-      name="public/system-builder-ng-linux-stable"
+      name="sbxg/linux"
       path="linux-stable"
-      remote="jml"
+      remote="github"
       revision="56b11330d398d188e16a8f53f8678c7538afafeb" />
 
    <project
-      name="u-boot.git"
+      name="sbxg/u-boot"
       path="u-boot"
-      remote="denx"
+      remote="github"
       revision="f33cdaa4c3da4a8fd35aa2f9a3172f31cc887b35" />
 
    <project
-      name="public/system-builder-ng-kernel-config"
+      name="sbxg/kernel-configs"
       path="kernel-configs"
-      remote="jml"
+      remote="github"
       revision="master" />
 
    <project
-      name="public/system-builder-ng-kernel-board"
+      name="sbxg/boards"
       path="boards"
-      remote="jml"
+      remote="github"
       revision="master" />
 
 

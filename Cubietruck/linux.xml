@@ -18,7 +18,7 @@
       name="sbxg/linux"
       path="linux-stable"
       remote="github"
-      revision="f1ab5eafa3625b41c74326a1994a820ff805d5b2"/>
+      revision="310ca59d1f1ced193c296e2ecd867b9f7fb1d297"/>
 
    <project
       name="sbxg/u-boot"

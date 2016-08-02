@@ -24,7 +24,7 @@
       name="sbxg/u-boot"
       path="u-boot"
       remote="github"
-      revision="f33cdaa4c3da4a8fd35aa2f9a3172f31cc887b35" />
+      revision="aeaec0e682f45b9e0c62c522fafea353931f73ed" />
 
    <project
       name="sbxg/kernel-configs"

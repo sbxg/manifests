@@ -18,7 +18,7 @@
       name="sbxg/linux"
       path="linux-stable"
       remote="github"
-      revision="310ca59d1f1ced193c296e2ecd867b9f7fb1d297"/> <!-- v4.6.4 -->
+      revision="5563368c573d2a245d14737b9ff32dcdee4126dc"/>
 
    <project
       name="sbxg/u-boot"
@@ -30,7 +30,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="github"
-      revision="master" />
+      revision="fba877a8fdfbf2022c17d38500c688ab902f0c7c" />
 
    <project
       name="sbxg/boards"

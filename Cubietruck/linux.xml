@@ -18,7 +18,8 @@
       name="sbxg/linux"
       path="linux-stable"
       remote="github"
-      revision="f1ab5eafa3625b41c74326a1994a820ff805d5b2"/>
+   <!-- following sha1 is for kernel 4.6.4 -->
+      revision="310ca59d1f1ced193c296e2ecd867b9f7fb1d297"/>
 
    <project
       name="sbxg/u-boot"
@@ -30,7 +31,8 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="github"
-      revision="master" />
+   <!-- following sha1 is for kernel 4.6.4 defconfig-->
+      revision="32d66ce7e08c0dc1827862ed8aed1741901d2d5c" />
 
    <project
       name="sbxg/boards"

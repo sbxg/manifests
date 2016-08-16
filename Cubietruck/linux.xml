@@ -3,9 +3,6 @@
 
    <!-- REMOTES -->
    <remote
-      name="kernel.googlesource.com"
-      fetch="https://kernel.googlesource.com/pub/scm/linux/kernel/git/davem/net-next/+/v4.7" />
-   <remote
       name="kernel.org"
       fetch="https://git.kernel.org/pub/scm/linux/kernel/git/" />
    <remote
@@ -17,6 +14,12 @@
 
 
    <!-- PROJECTS -->
+   <project
+      name="stable/linux-stable.git"
+      path="linux-stable"
+      remote="kernel.org"
+      revision=	"95f15f5ed6e68b479c73da842012108c567c6999"/> <!-- linux 4.7.1 from Greg -->
+
    <project
       name="sbxg/linux"
       path="linux-stable"

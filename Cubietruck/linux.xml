@@ -3,6 +3,9 @@
 
    <!-- REMOTES -->
    <remote
+      name="kernel.googlesource.com"
+      fetch="https://kernel.googlesource.com/pub/scm/linux/kernel/git/davem/net-next/+/v4.7" />
+   <remote
       name="kernel.org"
       fetch="https://git.kernel.org/pub/scm/linux/kernel/git/" />
    <remote

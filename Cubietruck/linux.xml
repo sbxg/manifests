@@ -30,7 +30,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="github"
-      revision="c9143227cb2c745c2d46da35fe38ab1a12b18601" />
+      revision="48e6aa98d90eb72bb27c79bd2def497f18ac177c" />
 
    <project
       name="sbxg/boards"

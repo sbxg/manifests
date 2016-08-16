@@ -21,12 +21,6 @@
       revision=	"95f15f5ed6e68b479c73da842012108c567c6999"/> <!-- linux 4.7.1 from Greg -->
 
    <project
-      name="sbxg/linux"
-      path="linux-stable"
-      remote="github"
-      revision="5563368c573d2a245d14737b9ff32dcdee4126dc"/>
-
-   <project
       name="sbxg/u-boot"
       path="u-boot"
       remote="github"

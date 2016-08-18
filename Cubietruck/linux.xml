@@ -12,7 +12,7 @@
 
    <!-- PROJECTS -->
    <project
-      name="sbxg/stable/linux-stable.git"
+      name="sbxg/linux.git"
       path="linux-stable"
       remote="github"
       revision=	"dev/jeanmarc/kernel.org.4.7.1"/> <!-- linux 4.7.1 from Greg Kroah-Hartman, but local to sbxg without any patch-->

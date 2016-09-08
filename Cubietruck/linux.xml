@@ -27,7 +27,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="github"
-      revision="dev/jeanmarc/kernel-4.7" /> <!-- linux 4.7.1 config with all feature in module -->
+      revision="15554a4b00ad5743c36c7d160f192dfc1008b1f5" /> <!-- please use config_kernel_linux.4.7.2  -->
 
    <project
       name="sbxg/boards"

@@ -15,7 +15,7 @@
       name="sbxg/linux.git"
       path="linux-stable"
       remote="github"
-      revision=	"dev/jeanmarc/kernel.org.4.7.1"/> <!-- linux 4.7.1 from Greg Kroah-Hartman, but local to sbxg without any patch-->
+      revision=	"84fae3f89282ce86a0c0da30e35fe66dbcadda6f"/> <!-- linux 4.7.2 from Greg Kroah-Hartman -->
 
    <project
       name="sbxg/u-boot"

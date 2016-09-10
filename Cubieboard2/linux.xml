@@ -1,1 +1,39 @@
-../Cubietruck/linux.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+   <!-- REMOTES -->
+   <remote
+      name="denx"
+      fetch="http://git.denx.de/" />
+   <remote
+      name="github"
+      fetch="https://github.com/" />
+
+
+   <!-- PROJECTS -->
+   <project
+      name="sbxg/linux.git"
+      path="linux-stable"
+      remote="github"
+      revision=	"84fae3f89282ce86a0c0da30e35fe66dbcadda6f"/> <!-- linux 4.7.2 from Greg Kroah-Hartman -->
+
+   <project
+      name="sbxg/u-boot"
+      path="u-boot"
+      remote="github"
+      revision="f33cdaa4c3da4a8fd35aa2f9a3172f31cc887b35" />
+
+   <project
+      name="sbxg/kernel-configs"
+      path="kernel-configs"
+      remote="github"
+      revision="7d50b5f41008c1ccf7a36bcbadfceb5dbb32712e" /> <!-- please use config_kernel_linux.4.7.2  -->
+
+   <project
+      name="sbxg/boards"
+      path="boards"
+      remote="github"
+      revision="master" />
+
+
+</manifest>

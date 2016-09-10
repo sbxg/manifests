@@ -3,9 +3,6 @@
 
    <!-- REMOTES -->
    <remote
-      name="kernel.org"
-      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/" />
-   <remote
       name="denx"
       fetch="http://git.denx.de/" />
    <remote
@@ -15,10 +12,10 @@
 
    <!-- PROJECTS -->
    <project
-      name="sbxg/linux"
+      name="sbxg/linux.git"
       path="linux-stable"
       remote="github"
-      revision="master" />
+      revision=	"84fae3f89282ce86a0c0da30e35fe66dbcadda6f"/> <!-- linux 4.7.2 from Greg Kroah-Hartman -->
 
    <project
       name="sbxg/u-boot"
@@ -30,7 +27,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="github"
-      revision="master" />
+      revision="d04b0aec1d692759d7a52594563c370a337f0a67" /> <!-- please use config_kernel_linux.4.7.2  -->
 
    <project
       name="sbxg/boards"

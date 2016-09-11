@@ -27,7 +27,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="github"
-      revision="d04b0aec1d692759d7a52594563c370a337f0a67" /> <!-- please use config_kernel_linux.4.7.2  -->
+      revision="8a90fa7f13c5b23b5ef6aa9e60c3c22717b14b5f" /> <!-- please use config_kernel_linux.4.7.2  -->
 
    <project
       name="sbxg/boards"

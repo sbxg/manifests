@@ -15,7 +15,7 @@
       name="sbxg/linux.git"
       path="linux-stable"
       remote="github"
-      revision=	"84fae3f89282ce86a0c0da30e35fe66dbcadda6f"/> <!-- linux 4.7.2 from Greg Kroah-Hartman -->
+      revision=	"d7f6728f57e3ecbb7ef34eb7d9f564d514775d75"/> <!-- linux 4.7.3 from Greg Kroah-Hartman -->
 
    <project
       name="sbxg/u-boot"

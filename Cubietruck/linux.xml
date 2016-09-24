@@ -18,7 +18,7 @@
       name="linux.git"
       path="linux-stable"
       remote="ref_kernel.org"
-      revision=	"v4.8-rc7"/> <!-- linux 4.8.rc7 from Linus -->
+      revision=	"v4.8-rc2"/> <!-- linux 4.8.rc2 from Linus -->
 
    <project
       name="sbxg/u-boot"
@@ -30,7 +30,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="github"
-      revision="b6ec4a90ac959c64834e053002d0cd1aeacfa18e" /> <!-- please use config_kernel_linux.4.7.3  -->
+      revision="dev/jeanmarc/kernel-4.8" /> <!-- please use config_kernel_linux.4.8.rc2  -->
 
    <project
       name="sbxg/boards"

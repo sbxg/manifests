@@ -30,7 +30,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="github"
-      revision="dev/jeanmarc/kernel.4.8" /> <!-- please use config_kernel_linux.4.8.rc2  -->
+      revision="dev/jeanmarc/kernel-4.8" /> <!-- please use config_kernel_linux.4.8.rc2  -->
 
    <project
       name="sbxg/boards"

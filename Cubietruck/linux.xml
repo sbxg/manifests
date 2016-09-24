@@ -3,6 +3,9 @@
 
    <!-- REMOTES -->
    <remote
+      name="ref_kernel.org"
+      fetch="https://git.kernel.org/cgit/linux/kernel/git/torvalds/" />
+   <remote
       name="denx"
       fetch="http://git.denx.de/" />
    <remote
@@ -12,10 +15,10 @@
 
    <!-- PROJECTS -->
    <project
-      name="sbxg/linux.git"
+      name="linux.git"
       path="linux-stable"
-      remote="github"
-      revision=	"d7f6728f57e3ecbb7ef34eb7d9f564d514775d75"/> <!-- linux 4.7.3 from Greg Kroah-Hartman -->
+      remote="ref_kernel.org"
+      revision=	"v4.8-rc7"/> <!-- linux 4.8.rc7 from Linus -->
 
    <project
       name="sbxg/u-boot"

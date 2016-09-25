@@ -18,7 +18,7 @@
       name="linux.git"
       path="linux-stable"
       remote="ref_kernel.org"
-      revision=	"v4.8-rc2"/> <!-- linux 4.8.rc2 from Linus -->
+      revision="v4.8-rc2"/>
 
    <project
       name="sbxg/u-boot"

@@ -4,7 +4,7 @@
    <!-- REMOTES -->
    <remote
       name="ref_kernel.org"
-      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/">
+      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/" />
    <remote
       name="denx"
       fetch="http://git.denx.de/" />
@@ -18,7 +18,7 @@
       name="linux.git"
       path="linux-stable"
       remote="ref_kernel.org"
-      revision="v4.8-rc2"/>
+      revision="v4.8-rc2" />
 
    <project
       name="sbxg/u-boot"

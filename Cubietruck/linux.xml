@@ -4,7 +4,7 @@
    <!-- REMOTES -->
    <remote
       name="ref_kernel.org"
-      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/" />
+      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/" />
    <remote
       name="denx"
       fetch="http://git.denx.de/" />

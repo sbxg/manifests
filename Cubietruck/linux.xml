@@ -18,7 +18,7 @@
       name="linux.git"
       path="linux-stable"
       remote="ref_kernel.org"
-      revision="694d0d0bb2030d2e36df73e2d23d5770511dbc8d" /> <!--"branche v4.8-rc2" />
+      revision="694d0d0bb2030d2e36df73e2d23d5770511dbc8d" /> <!--"branche v4.8-rc2" -->
 
    <project
       name="sbxg/u-boot"

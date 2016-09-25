@@ -1,0 +1,71 @@
+#! /usr/bin/env python3
+
+import os
+import re
+import sys
+from lxml import etree
+
+def validate(xml, dtd):
+    """
+        Tests an input XML file against an XML Document Type Declaration
+
+        :param xml: the XML file to test
+        :param dtd: the DTD to check against
+        :returns: True if the file is valid, False otherwise
+    """
+    print("Checking {0}...".format(xml), end="")
+
+    with open(xml, 'r') as filp:
+        contents = filp.read()
+
+    # FIXME This is very simple. It does not handle complex cases
+    # where the schema is split in several lines.
+    try:
+        contents = re.sub(r'<\?xml.*\?>', '', contents)
+    except RuntimeError:
+        print("INVALID (no xml header detected)")
+        return False
+
+    # Check for basic syntax
+    try:
+        root = etree.XML(contents)
+    except etree.XMLSyntaxError as exp:
+        print("INVALID (syntax error)")
+        print(exp, file=sys.stderr)
+        return False
+
+    # Validate accourding to DTD
+    ok = dtd.validate(root)
+    if ok is False:
+        print("FAIL!".format(xml))
+        print(dtd.error_log.filter_from_errors(), file=sys.stderr)
+    else:
+        print("ok".format(xml))
+
+    return ok
+
+
+# Document Type Declaration of manifests
+dtd = etree.DTD("manifest.dtd")
+
+# Return status of the program
+ret = 0
+
+# For each manifest in this repository
+for root, dirs, files in os.walk('.'):
+    if ".git" in root: # Skip .git/ directory
+        continue
+    for f in files:
+        _, ext = os.path.splitext(f)
+        if ext == ".xml":
+            # If we fail to validate the manifest, the return status
+            # of the program will be equal to the count of all failed
+            # manifests
+            if validate("{0}/{1}".format(root, f), dtd) is False:
+                ret += 1
+
+
+# TODO Check that the repositories exist
+# TODO Check that the revisions exist
+
+sys.exit(ret)

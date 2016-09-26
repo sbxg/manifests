@@ -3,7 +3,25 @@
 import os
 import re
 import sys
+import subprocess
+from urllib.parse import urlparse
+import xml.etree.ElementTree as ET
 from lxml import etree
+
+def check_urls(xml):
+    root = ET.fromstring(xml)
+    remotes = root.findall("remote")
+    projetcs = root.findall("project")
+    url = None
+    for project in projetcs:
+        rem = project.attrib["remote"]
+        for r in remotes:
+            if r.attrib["name"] == rem:
+                url = "{0}/{1}".format(r.attrib["fetch"], project.attrib["name"])
+                subprocess.check_call(["git", "ls-remote", "--quiet", "--heads", url],
+                                      stdout=subprocess.DEVNULL,
+                                      stderr=subprocess.DEVNULL)
+                break
 
 def validate(xml, dtd):
     """
@@ -13,7 +31,7 @@ def validate(xml, dtd):
         :param dtd: the DTD to check against
         :returns: True if the file is valid, False otherwise
     """
-    print("Checking {0}...".format(xml), end="")
+    print("Checking {0}... ".format(xml), end="")
 
     with open(xml, 'r') as filp:
         contents = filp.read()
@@ -21,14 +39,14 @@ def validate(xml, dtd):
     # FIXME This is very simple. It does not handle complex cases
     # where the schema is split in several lines.
     try:
-        contents = re.sub(r'<\?xml.*\?>', '', contents)
+        contents_sub = re.sub(r'<\?xml.*\?>', '', contents)
     except RuntimeError:
         print("INVALID (no xml header detected)")
         return False
 
     # Check for basic syntax
     try:
-        root = etree.XML(contents)
+        root = etree.XML(contents_sub)
     except etree.XMLSyntaxError as exp:
         print("INVALID (syntax error)")
         print(exp, file=sys.stderr)
@@ -37,10 +55,15 @@ def validate(xml, dtd):
     # Validate accourding to DTD
     ok = dtd.validate(root)
     if ok is False:
-        print("FAIL!".format(xml))
+        print("FAIL!")
         print(dtd.error_log.filter_from_errors(), file=sys.stderr)
     else:
-        print("ok".format(xml))
+        try:
+            ok = check_urls(contents)
+            print("ok".format(xml))
+        except subprocess.CalledProcessError:
+            print("FAIL! (unreachable)")
+            ok = False
 
     return ok
 
@@ -63,9 +86,5 @@ for root, dirs, files in os.walk('.'):
             # manifests
             if validate("{0}/{1}".format(root, f), dtd) is False:
                 ret += 1
-
-
-# TODO Check that the repositories exist
-# TODO Check that the revisions exist
 
 sys.exit(ret)

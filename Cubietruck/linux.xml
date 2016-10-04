@@ -18,7 +18,7 @@
       name="linux.git"
       path="linux-stable"
       remote="ref_kernel.org"
-      revision="3be7988674ab33565700a37b210f502563d932e6" /> <!--"branche v4.8-rc7" -->
+      revision="ddf6b1a7de691080a203e6ce1dff4331e1770825" /> <!--"branche v4.8" -->
 
    <project
       name="sbxg/u-boot"
@@ -30,7 +30,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="github"
-      revision="dev/jeanmarc/kernel-4.8" /> <!-- please use config_kernel_linux.4.8.rc7  -->
+      revision="dev/jeanmarc/kernel-4.8" /> <!-- please use config_kernel_linux.4.8  -->
 
    <project
       name="sbxg/boards"

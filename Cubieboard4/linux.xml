@@ -3,6 +3,9 @@
 
    <!-- REMOTES -->
    <remote
+      name="ref_kernel.org"
+      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/" />
+   <remote
       name="denx"
       fetch="http://git.denx.de" />
    <remote
@@ -12,10 +15,10 @@
 
    <!-- PROJECTS -->
    <project
-      name="sbxg/linux.git"
+      name="linux.git"
       path="linux-stable"
-      remote="github"
-      revision=	"84fae3f89282ce86a0c0da30e35fe66dbcadda6f"/> <!-- linux 4.7.2 from Greg Kroah-Hartman -->
+      remote="ref_kernel.org"
+      revision="3be7988674ab33565700a37b210f502563d932e6" /> <!--"branche v4.8-rc7" -->
 
    <project
       name="sbxg/u-boot"
@@ -27,7 +30,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="github"
-      revision="8a90fa7f13c5b23b5ef6aa9e60c3c22717b14b5f" /> <!-- please use config_kernel_linux.4.7.2  -->
+      revision="dev/jeanmarc/kernel-4.8" /> <!-- please use config_kernel_linux.4.8.rc7  -->
 
    <project
       name="sbxg/boards"

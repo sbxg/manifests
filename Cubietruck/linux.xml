@@ -30,7 +30,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="github"
-      revision="master-merge-wip" /> <!-- please use config_kernel_linux.4.8  -->
+      revision="master" /> <!-- please use config_kernel_linux.4.8 to test master branch  -->
 
    <project
       name="sbxg/boards"

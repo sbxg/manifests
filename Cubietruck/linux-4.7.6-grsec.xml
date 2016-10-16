@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+   <!-- REMOTES -->
+   <remote
+      name="denx"
+      fetch="http://git.denx.de" />
+   <remote
+      name="github"
+      fetch="https://github.com" />
+
+
+   <!-- PROJECTS -->
+   <project
+      name="sbxg/linux.git"
+      path="linux-stable"
+      remote="github"
+      revision=	"fae780a9f10461d3c7a616a10381c6e49a2f635e"/> <!-- 4.7.6+grsec -->
+
+   <project
+      name="sbxg/u-boot"
+      path="u-boot"
+      remote="github"
+      revision="aeaec0e682f45b9e0c62c522fafea353931f73ed" /> <!-- v2016.05  -->
+
+   <project
+      name="sbxg/kernel-configs"
+      path="kernel-configs"
+      remote="github"
+      revision="master" />
+
+   <project
+      name="sbxg/boards"
+      path="boards"
+      remote="github"
+      revision="master" />
+
+</manifest>

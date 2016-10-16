@@ -14,7 +14,6 @@
 
 
    <!-- PROJECTS -->
-
    <project
       name="linux.git"
       path="linux-stable"
@@ -32,7 +31,6 @@
       path="kernel-configs"
       remote="github"
       revision="dev/jeanmarc/kernel-4.8" /> <!-- please use config_kernel_linux.4.8.rc7  -->
-
    <project
       name="sbxg/boards"
       path="boards"

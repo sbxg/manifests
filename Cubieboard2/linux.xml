@@ -17,7 +17,7 @@
    <project
       name="linux.git"
       path="linux-stable"
-      remote="ref_github"
+      remote="ref_kernel.org"
       revision="ddf6b1a7de691080a203e6ce1dff4331e1770825" /> <!--"branche v4.8" -->
 
    <project

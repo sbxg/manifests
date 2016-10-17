@@ -4,12 +4,12 @@
    <!-- REMOTES -->
    <remote
       name="ref_kernel.org"
-      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/" />
+      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds" />
    <remote
-      name="denx"
+      name="ref_denx"
       fetch="http://git.denx.de" />
    <remote
-      name="github"
+      name="ref_github"
       fetch="https://github.com" />
 
 
@@ -23,19 +23,19 @@
    <project
       name="sbxg/u-boot"
       path="u-boot"
-      remote="github"
+      remote="ref_github"
       revision="f33cdaa4c3da4a8fd35aa2f9a3172f31cc887b35" />
 
    <project
       name="sbxg/kernel-configs"
       path="kernel-configs"
-      remote="github"
+      remote="ref_github"
       revision="master" /> <!-- please use config_kernel_linux.4.8 to test master branch  -->
 
    <project
       name="sbxg/boards"
       path="boards"
-      remote="github"
+      remote="ref_github"
       revision="master" />
 
 

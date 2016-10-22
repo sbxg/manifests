@@ -6,4 +6,4 @@ python:
 install:
    - pip install lxml
 
-script: python ./validator
+script: python ./validator -v

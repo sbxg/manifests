@@ -4,13 +4,13 @@
    <!-- REMOTES -->
    <remote
       name="ref_kernel.org"
-      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/" />
+      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds" />
    <remote
       name="denx"
-      fetch="http://git.denx.de/" />
+      fetch="http://git.denx.de" />
    <remote
       name="github"
-      fetch="https://github.com/" />
+      fetch="https://github.com" />
 
 
    <!-- PROJECTS -->

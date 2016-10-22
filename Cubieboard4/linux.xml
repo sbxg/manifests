@@ -4,12 +4,12 @@
    <!-- REMOTES -->
    <remote
       name="ref_kernel.org"
-      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/" />
+      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds" />
    <remote
-      name="denx"
+      name="ref_denx"
       fetch="http://git.denx.de" />
    <remote
-      name="github"
+      name="ref_github"
       fetch="https://github.com" />
 
 
@@ -18,25 +18,25 @@
       name="linux.git"
       path="linux-stable"
       remote="ref_kernel.org"
-      revision="3be7988674ab33565700a37b210f502563d932e6" /> <!--"branche v4.8-rc7" -->
+      revision="ddf6b1a7de691080a203e6ce1dff4331e1770825" /> <!--"branche v4.8" -->
 
    <project
       name="sbxg/u-boot"
       path="u-boot"
-      remote="github"
-      revision="f33cdaa4c3da4a8fd35aa2f9a3172f31cc887b35" />
+      remote="ref_github"
+      revision="aeaec0e682f45b9e0c62c522fafea353931f73ed" />
 
    <project
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="github"
-      revision="dev/jeanmarc/kernel-4.8" /> <!-- please use config_kernel_linux.4.8.rc7  -->
+      revision="master" /> <!-- please use config_kernel_linux.4.8 to test master branch -->
 
    <project
       name="sbxg/boards"
       path="boards"
-      remote="github"
-      revision="master" />
+      remote="ref_github"
+      revision="8edbeeeedec4f3417fbf6b5cd89d4b38f3f95947" />
 
 
 </manifest>

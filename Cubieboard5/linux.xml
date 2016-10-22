@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+   <!-- REMOTES -->
+   <remote
+      name="ref_kernel.org"
+      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds" />
+   <remote
+      name="ref_denx"
+      fetch="http://git.denx.de" />
+   <remote
+      name="ref_github"
+      fetch="https://github.com" />
+
+
+   <!-- PROJECTS -->
+   <project
+      name="linux.git"
+      path="linux-stable"
+      remote="ref_kernel.org"
+      revision="ddf6b1a7de691080a203e6ce1dff4331e1770825" /> <!--"branche v4.8" -->
+
+   <project
+      name="sbxg/u-boot"
+      path="u-boot"
+      remote="ref_github"
+      revision="1b5a1e6d9b3ab5b88ac4a22122801d63058746fc" />
+
+   <project
+      name="sbxg/kernel-configs"
+      path="kernel-configs"
+      remote="github"
+      revision="master" /> <!-- please use config_kernel_linux.4.8 to test master branch -->
+
+   <project
+      name="sbxg/boards"
+      path="boards"
+      remote="ref_github"
+      revision="master" />
+
+
+</manifest>

@@ -9,7 +9,7 @@ from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 from lxml import etree
 
-def check_urls(xml):
+def check_urls(xml, verbose=False):
     """
         Check that all URLs in the XML are reachable.
         Throws an exception of type subprocess.CalledProcessError on error.
@@ -25,17 +25,24 @@ def check_urls(xml):
         for r in remotes:
             if r.attrib["name"] == rem:
                 url = "{0}/{1}".format(r.attrib["fetch"], project.attrib["name"])
-                subprocess.check_call(["git", "ls-remote", "--quiet", "--heads", url],
+                cmd = ["git", "ls-remote", "--quiet", "--heads", url]
+                if verbose:
+                    print("Running command:")
+                    for arg in cmd:
+                        print("{0} ".format(arg), end="")
+                    print("")
+                subprocess.check_call(cmd,
                                       stdout=subprocess.DEVNULL,
                                       stderr=subprocess.DEVNULL)
                 break
 
-def validate(xml, dtd):
+def validate(xml, dtd, verbose=False):
     """
         Tests an input XML file against an XML Document Type Declaration
 
         :param xml: the XML file to test
         :param dtd: the DTD to check against
+        :param verbose: the verbosity of the checks
         :returns: True if the file is valid, False otherwise
     """
     print("Checking {0}... ".format(xml), end="")
@@ -66,7 +73,7 @@ def validate(xml, dtd):
         print(dtd.error_log.filter_from_errors(), file=sys.stderr)
     else:
         try:
-            ok = check_urls(contents)
+            ok = check_urls(contents, verbose)
             print("ok".format(xml))
         except subprocess.CalledProcessError:
             print("FAIL! (unreachable)")
@@ -85,7 +92,12 @@ parser = argparse.ArgumentParser(description="Manifests Static Validator")
 parser.add_argument(
     'manifests', metavar="MANIFEST", type=str, nargs='*',
     help="Manifest file to validate. "
-    "All XML files in the current directory, if none are specified")
+    "All XML files in the current directory, if none are specified"
+)
+parser.add_argument(
+    '-v', action='store_true',
+    help="Toggle verbose mode"
+)
 args = parser.parse_args()
 
 if len(args.manifests) <= 0:
@@ -99,13 +111,13 @@ if len(args.manifests) <= 0:
                 # If we fail to validate the manifest, the return status
                 # of the program will be equal to the count of all failed
                 # manifests
-                if validate("{0}/{1}".format(root, f), dtd) is False:
+                if validate("{0}/{1}".format(root, f), dtd, args.v) is False:
                     ret += 1
 
 else:
     # For each specified manifest
     for manifest in args.manifests:
-        if validate(manifest, dtd) is False:
+        if validate(manifest, dtd, args.v) is False:
             ret += 1
 
 sys.exit(ret)

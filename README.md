@@ -47,11 +47,10 @@ sudo apt install python3 python3-pip
 sudo pip3 install lxml
 ```
 
-
-To run the validator:
-```bash
-./validator
-```
+Basic usage:
+- `./validator --help`: for details;
+- `./validator`: to check ALL XML files in the current directory;
+- `./validator ./Cubietruck/*`: to check specific files (here all files in the Cubietruck/ directory.
 
 
 [1]: http://cubieboard.org/

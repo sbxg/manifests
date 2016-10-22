@@ -3,12 +3,19 @@
 import os
 import re
 import sys
+import argparse
 import subprocess
 from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 from lxml import etree
 
 def check_urls(xml):
+    """
+        Check that all URLs in the XML are reachable.
+        Throws an exception of type subprocess.CalledProcessError on error.
+
+        :param xml: An XML document
+    """
     root = ET.fromstring(xml)
     remotes = root.findall("remote")
     projetcs = root.findall("project")
@@ -74,17 +81,31 @@ dtd = etree.DTD("manifest.dtd")
 # Return status of the program
 ret = 0
 
-# For each manifest in this repository
-for root, dirs, files in os.walk('.'):
-    if ".git" in root: # Skip .git/ directory
-        continue
-    for f in files:
-        _, ext = os.path.splitext(f)
-        if ext == ".xml":
-            # If we fail to validate the manifest, the return status
-            # of the program will be equal to the count of all failed
-            # manifests
-            if validate("{0}/{1}".format(root, f), dtd) is False:
-                ret += 1
+parser = argparse.ArgumentParser(description="Manifests Static Validator")
+parser.add_argument(
+    'manifests', metavar="MANIFEST", type=str, nargs='*',
+    help="Manifest file to validate. "
+    "All XML files in the current directory, if none are specified")
+args = parser.parse_args()
+
+if len(args.manifests) <= 0:
+    # For each manifest in this repository
+    for root, dirs, files in os.walk('.'):
+        if ".git" in root: # Skip .git/ directory
+            continue
+        for f in files:
+            _, ext = os.path.splitext(f)
+            if ext == ".xml":
+                # If we fail to validate the manifest, the return status
+                # of the program will be equal to the count of all failed
+                # manifests
+                if validate("{0}/{1}".format(root, f), dtd) is False:
+                    ret += 1
+
+else:
+    # For each specified manifest
+    for manifest in args.manifests:
+        if validate(manifest, dtd) is False:
+            ret += 1
 
 sys.exit(ret)

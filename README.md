@@ -1,6 +1,9 @@
 SBXG Manifests
 ==============
 
+[![Build Status](https://travis-ci.org/sbxg/manifests.svg?branch=master)](https://travis-ci.org/sbxg/manifests)
+
+
 SBXG (https://github.com/sbxg/sbxg) relies heavily on manifests files that
 describe:
 - which kernel revision must be used;
@@ -21,16 +24,35 @@ The table below shows the supported boards.
 | [Cubieboard2][1]  | Linux  | Good           |
 | [Cubietruck][2]   | Linux  | Good           |
 | [Cubieboard4][1]  | Linux  | Experimental   |
-| [Sabre SD][3]     | Linux  | Experimental   |
 
 
 # Validation
 
+Manifests are XML files, defined by the Document Type Definition (DTD) `manifest.dtd`.
 The `validator` script is a python 3 script that uses the LXML python module
 (`pip3 install lxml`) to validate all manifests files. This script can be used
-for development, to make sure valid manifests files are pushed.
+for development to make sure valid manifests files are pushed. Travis checks every push
+to make ensure manifests are valid.
+
+This script checks, for each manifest:
+- the syntactic correctness of the XML;
+- its compliance to the defined DTD;
+- that all URLs are reachable. `git ls-remote` is used under the hood the verify this point.
+
+
+To install dependencies with `apt` (Debian/Ubuntu):
+
+```bash
+sudo apt install python3 python3-pip
+sudo pip3 install lxml
+```
+
+
+To run the validator:
+```bash
+./validator
+```
 
 
 [1]: http://cubieboard.org/
 [2]: http://cubietruck.org/
-[3]: http://www.nxp.com/products/microcontrollers-and-processors/arm-processors/i.mx-applications-processors-based-on-arm-cores/i.mx-6-processors/i.mx6qp/sabre-board-for-smart-devices-reference-design-based-on-the-i.mx-6-series:RDIMX6SABREBRD

@@ -25,15 +25,21 @@ def check_urls(xml, verbose=False):
         for r in remotes:
             if r.attrib["name"] == rem:
                 url = "{0}/{1}".format(r.attrib["fetch"], project.attrib["name"])
-                cmd = ["git", "ls-remote", "--quiet", "--heads", url]
+                cmd = ["git", "ls-remote"]
+                if not verbose:
+                    cmd += ["--quiet"]
+                cmd += ["--heads", url]
                 if verbose:
                     print("Running command:")
                     for arg in cmd:
                         print("{0} ".format(arg), end="")
                     print("")
-                subprocess.check_call(cmd,
-                                      stdout=subprocess.DEVNULL,
-                                      stderr=subprocess.DEVNULL)
+                if verbose:
+                    subprocess.check_call(cmd)
+                else:
+                    subprocess.check_call(cmd,
+                                          stdout=subprocess.DEVNULL,
+                                          stderr=subprocess.DEVNULL)
                 break
 
 def validate(xml, dtd, verbose=False):

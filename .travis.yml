@@ -1,3 +1,4 @@
+sudo: required
 dist: trusty
 language: python
 python:
@@ -5,6 +6,7 @@ python:
 
 install:
    - pip install lxml
-   - sudo apt-get install libcurl3-gnutls=7.21.0-1
+   - dpkg -l
+   - git --version
 
 script: python ./validator -v

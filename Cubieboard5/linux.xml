@@ -18,7 +18,7 @@
       name="linux.git"
       path="linux-stable"
       remote="ref_kernel.org"
-      revision="ddf6b1a7de691080a203e6ce1dff4331e1770825" /> <!--"branche v4.8" -->
+      revision="a909d3e636995ba7c349e2ca5dbb528154d4ac30" /> <!--"branche v4.9.rc3" -->
 
    <project
       name="sbxg/u-boot"
@@ -30,7 +30,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="ref_github"
-      revision="master" /> <!-- please use config_kernel_linux.4.8 to test master branch -->
+      revision="master" /> <!-- please use config_kernel_linux.4.9.rc3 to test -->
 
    <project
       name="sbxg/boards"

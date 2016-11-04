@@ -50,7 +50,7 @@ sudo pip3 install lxml
 
 Basic usage:
 - `./validator --help`: for details;
-- `./validator`: to check ALL XML files in the current directory and recurcives directories;
+- `./validator`: to check ALL XML files in the current directory and recursives directories;
 - `./validator ./Cubietruck/*`: to check specific files (here all files in the Cubietruck/ directory.
 
 [1]: http://cubieboard.org/

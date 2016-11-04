@@ -30,7 +30,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="ref_github"
-      revision="master" /> <!-- please use config_kernel_linux.4.9.rc3 to test -->
+      revision="54b2e7d06cb3619e84c30ec5dd50c371ca3d8e9b" /> <!-- please use config_kernel_linux.4.9.rc3  -->
 
    <project
       name="sbxg/boards"

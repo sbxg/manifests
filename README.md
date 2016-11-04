@@ -24,6 +24,7 @@ The table below shows the supported boards.
 | [Cubieboard2][1]  | Linux  | Good           |
 | [Cubietruck][2]   | Linux  | Good           |
 | [Cubieboard4][1]  | Linux  | Experimental   |
+| [Cubieboard5][1]  | Linux  | Experimental   |
 
 
 # Validation
@@ -43,7 +44,7 @@ This script checks, for each manifest:
 To install dependencies with `apt` (Debian/Ubuntu):
 
 ```bash
-sudo apt install python3 python3-pip
+sudo apt-get install python3 python3-pip python-dev libxml2-dev libxslt1-dev zlib1g-dev 
 sudo pip3 install lxml
 ```
 
@@ -52,6 +53,19 @@ Basic usage:
 - `./validator`: to check ALL XML files in the current directory;
 - `./validator ./Cubietruck/*`: to check specific files (here all files in the Cubietruck/ directory.
 
+Expected result (example)
+When launching validator (./validator), all XML files ares parsed as follow (example)
+local@solo:~/git/SBXG/manifests.git$ ./validator 
+Checking ./Cubietruck/linux-4.7.xml... ok
+Checking ./Cubietruck/linux-4.4.2-grsec.xml... ok
+Checking ./Cubietruck/linux.xml... ok
+Checking ./Cubietruck/linux-4.2.6-grsec.xml... ok
+Checking ./Cubietruck/linux-4.7.6-grsec.xml... ok
+Checking ./Marsboard/linux.xml... ok
+Checking ./Cubieboard4/linux.xml... ok
+Checking ./Cubieboard2/linux.xml... ok
+Checking ./Cubieboard5/linux.xml... ok
+Checking ./Cubieboard/linux.xml... ok
 
 [1]: http://cubieboard.org/
 [2]: http://cubietruck.org/

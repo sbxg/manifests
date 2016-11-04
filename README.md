@@ -50,22 +50,8 @@ sudo pip3 install lxml
 
 Basic usage:
 - `./validator --help`: for details;
-- `./validator`: to check ALL XML files in the current directory;
+- `./validator`: to check ALL XML files in the current directory and recurcives directories;
 - `./validator ./Cubietruck/*`: to check specific files (here all files in the Cubietruck/ directory.
-
-Expected result (example)
-When launching validator (./validator), all XML files ares parsed as follow (example)
-local@solo:~/git/SBXG/manifests.git$ ./validator 
-Checking ./Cubietruck/linux-4.7.xml... ok
-Checking ./Cubietruck/linux-4.4.2-grsec.xml... ok
-Checking ./Cubietruck/linux.xml... ok
-Checking ./Cubietruck/linux-4.2.6-grsec.xml... ok
-Checking ./Cubietruck/linux-4.7.6-grsec.xml... ok
-Checking ./Marsboard/linux.xml... ok
-Checking ./Cubieboard4/linux.xml... ok
-Checking ./Cubieboard2/linux.xml... ok
-Checking ./Cubieboard5/linux.xml... ok
-Checking ./Cubieboard/linux.xml... ok
 
 [1]: http://cubieboard.org/
 [2]: http://cubietruck.org/

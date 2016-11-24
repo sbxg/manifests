@@ -26,7 +26,8 @@ def check_urls(xml, verbose=False):
             if r.attrib["name"] == rem:
                 url = "{0}/{1}".format(r.attrib["fetch"], project.attrib["name"])
                 # FIXME This is a terrible workaround for travis, due to a network error
-                if url == "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git":
+                if url == "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git" or \
+                   url == "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git":
                     return
                 cmd = ["git", "ls-remote"]
                 if not verbose:

@@ -14,8 +14,6 @@
 
 
    <!-- PROJECTS -->
-
-</manifest>
    <project
       name="linux-stable.git"
       path="linux-stable"
@@ -32,7 +30,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="ref_github"
-      revision="master" /> <!-- please use config_kernel_linux.4.8  -->
+      revision="master" /> <!-- please use config_kernel_linux.4.8.7  -->
 
    <project
       name="sbxg/boards"
@@ -40,3 +38,4 @@
       remote="ref_github"
       revision="master" />
 
+</manifest>

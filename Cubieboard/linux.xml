@@ -3,40 +3,40 @@
 
    <!-- REMOTES -->
    <remote
-      name="kernel.org"
-      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/" />
+      name="ref_kernel_stable.org"
+      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/stable" />
    <remote
-      name="denx"
-      fetch="http://git.denx.de/" />
+      name="ref_denx"
+      fetch="http://git.denx.de" />
    <remote
-      name="github"
-      fetch="https://github.com/" />
+      name="ref_github"
+      fetch="https://github.com" />
 
 
    <!-- PROJECTS -->
+
+</manifest>
    <project
-      name="sbxg/linux"
+      name="linux-stable.git"
       path="linux-stable"
-      remote="github"
-      revision="be4cb235441a691ee63ba5e00843a9c210be5b8a" />
+      remote="ref_kernel_stable.org"
+      revision="567aeca9fbb7f1f00fc6bbdd6861010ce7ddaf22" /> <!--"kernel 4.8.7 from Greg" -->
 
    <project
       name="sbxg/u-boot"
       path="u-boot"
-      remote="github"
+      remote="ref_github"
       revision="f33cdaa4c3da4a8fd35aa2f9a3172f31cc887b35" />
 
    <project
       name="sbxg/kernel-configs"
       path="kernel-configs"
-      remote="github"
-      revision="master" />
+      remote="ref_github"
+      revision="master" /> <!-- please use config_kernel_linux.4.8  -->
 
    <project
       name="sbxg/boards"
       path="boards"
-      remote="github"
+      remote="ref_github"
       revision="master" />
 
-
-</manifest>

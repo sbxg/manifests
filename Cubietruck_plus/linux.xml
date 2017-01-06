@@ -20,11 +20,11 @@
       remote="ref_kernel.org"
       revision="b05b1307892247c76ad6dc3f59921736279a347b" /> <!--"branche v4.9Xs" -->
 
-   <project
-      name="sbxg/u-boot"
+  <project
+      name="u-boot.git"
       path="u-boot"
-      remote="ref_github"
-      revision="1b5a1e6d9b3ab5b88ac4a22122801d63058746fc" />
+      remote="ref_denx"
+      revision="29e0cfb4f77f7aa369136302cee14a91e22dca71" /> <!-- compile ok in standalone mode for Cubietruck plus -->
 
    <project
       name="sbxg/kernel-configs"

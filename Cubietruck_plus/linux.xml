@@ -18,7 +18,7 @@
       name="linux.git"
       path="linux-stable"
       remote="ref_kernel.org"
-      revision="b05b1307892247c76ad6dc3f59921736279a347b" /> <!--"branche v4.9Xs" -->
+      revision="6437abdb624edc4e68859e66768933d2b5eb9f09" /> <!--"branche v4.9.1" -->
 
   <project
       name="u-boot.git"

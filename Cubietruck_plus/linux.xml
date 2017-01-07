@@ -33,7 +33,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="ref_github"
-      revision="91e8dd4c663fd65a7ea646fb4f4231b81764473d" /> <!-- please use config_kernel_linux.4.9  -->
+      revision="25a4e8566bb9e31f594cb8d119185c825f2423e8" /> <!-- please use config_kernel_linux.4.9.1  -->
 
    <project
       name="sbxg/boards"

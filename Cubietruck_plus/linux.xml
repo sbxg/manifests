@@ -3,6 +3,9 @@
 
    <!-- REMOTES -->
    <remote
+      name="ref_kernel_stable.org"
+      fetch="https://git.kernel.org/pub/scm/linux/kernel/git/stable" />
+   <remote
       name="ref_kernel.org"
       fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds" />
    <remote
@@ -15,9 +18,9 @@
 
    <!-- PROJECTS -->
    <project
-      name="linux.git"
+      name="linux-stable.git"
       path="linux-stable"
-      remote="ref_kernel.org"
+      remote="ref_kernel_stable.org"
       revision="6437abdb624edc4e68859e66768933d2b5eb9f09" /> <!--"branche v4.9.1" -->
 
   <project

@@ -30,7 +30,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="ref_github"
-      revision="master" /> <!-- please use config_kernel_linux.4.8 fixme  -->
+      revision="master" /> <!-- please use config_kernel_linux.4.10.1  -->
 
    <project
       name="sbxg/boards"

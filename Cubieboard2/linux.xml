@@ -18,7 +18,7 @@
       name="linux-stable.git"
       path="linux-stable"
       remote="ref_kernel_stable.org"
-      revision="567aeca9fbb7f1f00fc6bbdd6861010ce7ddaf22" /> <!--"kernel 4.8.7 from Greg" -->
+      revision="d23a9821d3972ae373357e933c8af8216d72e374" /> <!--"kernel 4.10.1 from Greg" -->
 
    <project
       name="sbxg/u-boot"
@@ -30,7 +30,7 @@
       name="sbxg/kernel-configs"
       path="kernel-configs"
       remote="ref_github"
-      revision="master" /> <!-- please use config_kernel_linux.4.8  -->
+      revision="master" /> <!-- please use config_kernel_linux.4.8 fixme  -->
 
    <project
       name="sbxg/boards"

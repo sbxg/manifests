@@ -24,7 +24,7 @@
       name="sbxg/u-boot"
       path="u-boot"
       remote="ref_github"
-      revision="f33cdaa4c3da4a8fd35aa2f9a3172f31cc887b35" />
+      revision="ee6fb217cbf3e81cd2c5f1a13f989cf59016781f" /> <!--"Uboot Prepare v2017-rc3 v2017.03-rc3" -->
 
    <project
       name="sbxg/kernel-configs"

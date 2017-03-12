@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+   <!--
+
+    Mini Doc: When  using git clone command via  'make sync '  in SBXG
+    Project  (or make init), repo tool  create a local directory based
+    on following pattern matching:
+     - local dir = TOP_DIR_SBXG_PROJECT (local) + manifest.project.path (this XML definition)
+     - external fetch = manifest.project.remote.fetch  + / + manifest.project.name
+ 
+   -->
 
    <!-- REMOTES -->
    <remote
@@ -21,10 +30,16 @@
       revision="d23a9821d3972ae373357e933c8af8216d72e374" /> <!--"kernel 4.10.1 from Greg" -->
 
    <project
-      name="sbxg/u-boot"
+      name="u-boot"
       path="u-boot"
       remote="ref_denx"
       revision="ee6fb217cbf3e81cd2c5f1a13f989cf59016781f" /> <!--"Uboot Prepare v2017-rc3 v2017.03-rc3" -->
+
+   <project
+      name="sbxg/u-boot"
+      path="u-boot"
+      remote="ref_denx_sbxg"
+      revision="" />
 
    <project
       name="sbxg/kernel-configs"
